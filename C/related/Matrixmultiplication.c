@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
+#include <windows.h>
 
 #define INPUTFILE_MAXSIZE 250
 #define MAX_BUFFER 10
@@ -60,6 +61,8 @@ int main()
     matrix_free(i, Matrix_1);
     matrix_free(j, Matrix_2);
     matrix_free(i, Matrix_result);
+
+    Sleep(10000);
     return 0;
 }
 

@@ -89,6 +89,11 @@ void game_events(struct Game *g)
 
     while(SDL_PollEvent(&g->event) == true)
     {
+        if (g->event.type == SDL_EVENT_QUIT)
+        {
+            g->is_running = false;
+        }
+
         fprintf(pGetevent_txt, "%d ", g->event.type);
         i++;
         printf("%d\n", i);
